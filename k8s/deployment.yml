@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: insignia-python-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: insignia-python-app
+  template:
+    metadata:
+      labels:
+        app: insignia-python-app
+    spec:
+      containers:
+        - name: insignia-python-app
+          image: ninoloid/insignia-python-app:latest
+          ports:
+            - containerPort: 3000
