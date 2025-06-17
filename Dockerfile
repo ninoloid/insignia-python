@@ -10,4 +10,5 @@ COPY src/ ./src
 
 EXPOSE 5000
 
-CMD ["flask", "--app", "src/app.py", "run"]
+# uncomment this if you want to run directly by dockerfile
+# CMD ["flask", "--app", "src/app.py", "run"]

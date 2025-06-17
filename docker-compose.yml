@@ -6,11 +6,11 @@ services:
     container_name: insignia-python-app
     restart: unless-stopped
     ports:
-      - "5000:5000"
+      - "5001:5000"
     volumes:
       - ./:/usr/src/app
     working_dir: /usr/src/app
-    command: flask --app src/app.py run
+    command: flask --app src/app.py run --host=0.0.0.0 --reload
 
 volumes:
   mongo-data:
